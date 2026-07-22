@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Facilities — Barts Health Simulation Team</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;700&display=swap');
+  body { margin: 0; font-family: 'Fira Sans', Arial, sans-serif; }
+  a { color: #005EB8; }
+  a:hover { color: #003087; }
+</style>
+</helmet>
+
+<div style="--nhs-blue:#005EB8;--nhs-dark-blue:#003087;--nhs-aqua-blue:#00A9CE;--border-1:#D8DDE1;background:#fff;color:#231F20">
+
+  <header style="background:var(--nhs-blue);color:#fff;padding:12px 32px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
+    <a href="index.dc.html" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff">
+      <span style="background:#fff;color:var(--nhs-blue);font-family:Arial,sans-serif;font-weight:900;font-size:20px;letter-spacing:-1px;padding:4px 9px 2px;border-radius:2px">NHS</span>
+      <span style="font-weight:700;font-size:17px;color:#fff">Barts Health Simulation Team</span>
+    </a>
+    <a href="contact.dc.html" style="color:rgba(255,255,255,0.92);text-decoration:none;font-size:14px">Contact</a>
+  </header>
+  <nav style="background:#fff;border-bottom:1px solid var(--border-1);padding:0 32px;display:flex;gap:28px;overflow-x:auto">
+    <a href="index.dc.html" style="padding:14px 0;text-decoration:none;font-weight:700;font-size:15px;color:#231F20;border-bottom:4px solid transparent">Home</a>
+    <a href="about.dc.html" style="padding:14px 0;text-decoration:none;font-weight:700;font-size:15px;color:#231F20;border-bottom:4px solid transparent">About the team</a>
+    <a href="courses.dc.html" style="padding:14px 0;text-decoration:none;font-weight:700;font-size:15px;color:#231F20;border-bottom:4px solid transparent">Courses</a>
+    <a href="facilities.dc.html" style="padding:14px 0;text-decoration:none;font-weight:700;font-size:15px;color:var(--nhs-blue);border-bottom:4px solid var(--nhs-blue)">Facilities</a>
+    <a href="news.dc.html" style="padding:14px 0;text-decoration:none;font-weight:700;font-size:15px;color:#231F20;border-bottom:4px solid transparent">News</a>
+    <a href="contact.dc.html" style="padding:14px 0;text-decoration:none;font-weight:700;font-size:15px;color:#231F20;border-bottom:4px solid transparent">Contact</a>
+  </nav>
+
+  <header style="background:var(--nhs-blue);color:#fff;padding:52px 32px 56px">
+    <div style="max-width:1180px;margin:0 auto">
+      <div style="font-size:13px;letter-spacing:0.16em;text-transform:uppercase;font-weight:700;opacity:0.85;margin-bottom:14px">Facilities</div>
+      <h1 style="font-size:42px;font-weight:300;line-height:1.15;color:#fff;margin:0 0 16px;max-width:680px">Equipment that makes a scenario feel real.</h1>
+      <p style="font-size:18px;line-height:1.55;color:rgba(255,255,255,0.92);max-width:640px;margin:0">Our simulation suites combine high-fidelity manikins, part-task trainers, VR and an in-situ trauma bay — so training happens as close to real clinical conditions as possible.</p>
+    </div>
+  </header>
+
+  <section style="padding:64px 32px">
+    <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(2,1fr);gap:24px">
+
+      <div style="border:1px solid var(--border-1)">
+        <img src="assets/trauma-bay-training.jpg" alt="A&E resus team performing a trauma simulation on a manikin in a trauma bay" style="display:block;width:100%;height:260px;object-fit:cover">
+        <div style="padding:22px">
+          <div style="font-size:17px;font-weight:700;color:#231F20;margin:0 0 8px">In-situ trauma bay</div>
+          <p style="font-size:14px;line-height:1.55;color:#3D434A;margin:0">A dedicated resus bay set up with real monitors, drug trolleys and a SimMan 3G manikin, letting multi-disciplinary teams train in the actual clinical space they work in.</p>
+        </div>
+      </div>
+
+      <div style="border:1px solid var(--border-1)">
+        <img src="assets/vr-orsim.jpg" alt="Faculty member using a bronchoscopy part-task trainer connected to a laptop simulation display" style="display:block;width:100%;height:260px;object-fit:cover">
+        <div style="padding:22px">
+          <div style="font-size:17px;font-weight:700;color:#231F20;margin:0 0 8px">Bronchoscopy part-task trainer</div>
+          <p style="font-size:14px;line-height:1.55;color:#3D434A;margin:0">A dedicated bronchoscopy simulator with real-time airway visualisation, used to build airway and scope-handling skills before working on patients.</p>
+        </div>
+      </div>
+
+      <div style="border:1px solid var(--border-1)">
+        <img src="assets/endovascular-sim.jpg" alt="Simulated endovascular procedure showing a fluoroscopy display and vital signs monitor" style="display:block;width:100%;height:260px;object-fit:cover">
+        <div style="padding:22px">
+          <div style="font-size:17px;font-weight:700;color:#231F20;margin:0 0 8px">Endovascular simulator</div>
+          <p style="font-size:14px;line-height:1.55;color:#3D434A;margin:0">A fluoroscopy-linked vascular access rig with live vital-sign monitoring, for procedural training in a controlled, repeatable environment.</p>
+        </div>
+      </div>
+
+      <div style="border:1px solid var(--border-1)">
+        <img src="assets/haptic-sim.jpg" alt="Faculty demonstrating a haptic VR simulator on a trolley" style="display:block;width:100%;height:260px;object-fit:cover">
+        <div style="padding:22px">
+          <div style="font-size:17px;font-weight:700;color:#231F20;margin:0 0 8px">Haptic &amp; VR stations</div>
+          <p style="font-size:14px;line-height:1.55;color:#3D434A;margin:0">Mobile haptic and virtual reality rigs for procedural rehearsal, deployed for our VR Workshop and rotated across sites.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section style="padding:0 32px 64px">
+    <div style="max-width:1180px;margin:0 auto;background:#F2F4F5;border:1px solid #E6EAED;padding:40px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center">
+      <div style="border:1px solid var(--border-1);overflow:hidden">
+        <img src="assets/workshop-group.jpg" alt="Faculty and candidates practising suturing technique around a table during a workshop" style="display:block;width:100%;height:280px;object-fit:cover">
+      </div>
+      <div>
+        <div style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--nhs-blue);margin-bottom:12px">Bring your team in</div>
+        <h2 style="font-size:26px;font-weight:700;color:var(--nhs-dark-blue);margin:0 0 14px">Book a session in our simulation suite.</h2>
+        <p style="font-size:15px;line-height:1.6;color:#3D434A;margin:0 0 20px">Suites are available for scheduled courses and bespoke departmental training. Tell us your team size and the skills you're focused on.</p>
+        <a href="contact.dc.html" style="display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:4px;font-weight:700;font-size:15px;text-decoration:none;background:var(--nhs-blue);color:#fff">Enquire about a booking</a>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background:var(--nhs-dark-blue);color:#fff;padding:48px 32px 0">
+    <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px;padding-bottom:40px">
+      <div>
+        <h5 style="color:#fff;font-size:14px;font-weight:700;margin:0 0 14px">Barts Health Simulation Team</h5>
+        <p style="color:rgba(255,255,255,0.8);font-size:14px;max-width:340px;line-height:1.55;margin:0">Part of the Education Academy, supporting simulation-based learning across Barts Health NHS Trust.</p>
+      </div>
+      <div>
+        <h5 style="color:#fff;font-size:14px;font-weight:700;margin:0 0 14px">Courses</h5>
+        <a href="courses.dc.html" style="display:block;color:rgba(255,255,255,0.8);text-decoration:none;font-size:14px;padding:4px 0">ANTS Simulation Course</a>
+        <a href="courses.dc.html" style="display:block;color:rgba(255,255,255,0.8);text-decoration:none;font-size:14px;padding:4px 0">Clinical Debriefing Course</a>
+        <a href="courses.dc.html" style="display:block;color:rgba(255,255,255,0.8);text-decoration:none;font-size:14px;padding:4px 0">VR Workshop</a>
+      </div>
+      <div>
+        <h5 style="color:#fff;font-size:14px;font-weight:700;margin:0 0 14px">Our hospitals</h5>
+        <a href="about.dc.html" style="display:block;color:rgba(255,255,255,0.8);text-decoration:none;font-size:14px;padding:4px 0">The Royal London</a>
+        <a href="about.dc.html" style="display:block;color:rgba(255,255,255,0.8);text-decoration:none;font-size:14px;padding:4px 0">St Bartholomew's</a>
+        <a href="about.dc.html" style="display:block;color:rgba(255,255,255,0.8);text-decoration:none;font-size:14px;padding:4px 0">Newham University</a>
+        <a href="about.dc.html" style="display:block;color:rgba(255,255,255,0.8);text-decoration:none;font-size:14px;padding:4px 0">Whipps Cross</a>
+        <a href="about.dc.html" style="display:block;color:rgba(255,255,255,0.8);text-decoration:none;font-size:14px;padding:4px 0">Mile End</a>
+      </div>
+      <div>
+        <h5 style="color:#fff;font-size:14px;font-weight:700;margin:0 0 14px">Support</h5>
+        <a href="facilities.dc.html" style="display:block;color:rgba(255,255,255,0.8);text-decoration:none;font-size:14px;padding:4px 0">Simulation facilities</a>
+        <a href="news.dc.html" style="display:block;color:rgba(255,255,255,0.8);text-decoration:none;font-size:14px;padding:4px 0">News</a>
+        <a href="contact.dc.html" style="display:block;color:rgba(255,255,255,0.8);text-decoration:none;font-size:14px;padding:4px 0">Contact us</a>
+      </div>
+    </div>
+    <img src="assets/skyline-graphic.png" alt="" style="display:block;width:100%;filter:brightness(0) invert(1);opacity:0.3">
+    <div style="max-width:1180px;margin:0 auto;padding:20px 32px;border-top:1px solid rgba(255,255,255,0.2);font-size:13px;color:rgba(255,255,255,0.7);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px">
+      <span>© Barts Health NHS Trust Simulation Team {{ year }}</span>
+      <span>simulation.team@bartshealth.nhs.uk</span>
+    </div>
+  </footer>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return { year: new Date().getFullYear() };
+  }
+}
+</script>
+</body>
+</html>
