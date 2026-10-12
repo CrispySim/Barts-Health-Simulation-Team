@@ -1,4 +1,26 @@
 {
-  "updated": "",
-  "items": []
+  "updated": "12 October 2026",
+  "items": [
+    {
+      "headline": "GMC survey finds many locally employed and SAS doctors face bullying but fear speaking up",
+      "summary": "A survey of more than 10,500 doctors found 23% of locally employed and 31% of SAS doctors had experienced or witnessed bullying or harassment. Most who did not report felt it would make no difference.",
+      "source": "General Medical Council",
+      "date": "8 Oct 2026",
+      "url": "https://www.gmc-uk.org/news/news-archive/thousands-of-doctors-face-bullying-and-discrimination-but-fear-speaking-out"
+    },
+    {
+      "headline": "Using AI-assisted moderation to expand virtual reality healthcare simulation capacity",
+      "summary": "An article argues AI can reduce facilitator workload in VR simulation, freeing educators to focus on learner performance and debriefing, while keeping faculty in control and piloting on a small scale.",
+      "source": "HealthySimulation.com",
+      "date": "6 Oct 2026",
+      "url": "https://www.healthysimulation.com/?p=209944"
+    },
+    {
+      "headline": "Which? calls for a private dentistry ombudsman as ONS data shows high patient satisfaction",
+      "summary": "Which? surveyed people who had already had a problem with private dental care and called for an independent ombudsman. The BDA says that sample is not representative; ONS data shows 93.5% of private and 89.9% of NHS patients satisfied.",
+      "source": "Dentistry.co.uk",
+      "date": "6 Oct 2026",
+      "url": "https://dentistry.co.uk/2026/10/06/which-investigation-condemns-private-dentistry-despite-93-patient-satisfaction-rate"
+    }
+  ]
 }
