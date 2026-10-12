@@ -74,6 +74,17 @@
     </div>
   </section>
 
+  <section id="live-feed" style="padding:0 32px 72px;display:none">
+    <div style="max-width:1180px;margin:0 auto">
+      <div style="border-top:1px solid var(--border-1);padding-top:48px;margin-bottom:24px">
+        <div style="font-size:13px;letter-spacing:0.16em;text-transform:uppercase;font-weight:700;color:var(--nhs-blue);margin-bottom:8px">Weekly update</div>
+        <h2 style="font-size:30px;font-weight:700;color:var(--nhs-dark-blue);margin:0 0 8px">Patient safety &amp; NHS simulation news</h2>
+        <p id="live-feed-updated" style="font-size:14px;color:#768692;margin:0"></p>
+      </div>
+      <div id="live-feed-items" style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px"></div>
+    </div>
+  </section>
+
   <footer style="background:var(--nhs-dark-blue);color:#fff;padding:48px 32px 0">
     <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px;padding-bottom:40px">
       <div>
@@ -116,6 +127,54 @@
 class Component extends DCLogic {
   renderVals() {
     return { year: new Date().getFullYear() };
+  }
+  componentDidMount() {
+    this.loadFeed(0);
+  }
+  loadFeed(attempt) {
+    var list = document.getElementById('live-feed-items');
+    if (!list) {
+      if (attempt < 20) setTimeout(() => this.loadFeed(attempt + 1), 150);
+      return;
+    }
+    fetch('news-feed.json?v=' + Date.now(), { cache: 'no-store' })
+      .then((r) => (r.ok ? r.json() : null))
+      .then((data) => {
+        if (!data || !Array.isArray(data.items) || !data.items.length) return;
+        var safeUrl = (u) => (/^https?:\/\//i.test(u || '') ? u : null);
+        list.textContent = '';
+        data.items.slice(0, 6).forEach((it) => {
+          if (!it || !it.headline) return;
+          var card = document.createElement('div');
+          card.style.cssText = 'background:#fff;border:1px solid #D8DDE1;border-top:4px solid #00A9CE;padding:20px;display:flex;flex-direction:column';
+          var meta = document.createElement('div');
+          meta.style.cssText = 'font-size:11px;color:#768692;letter-spacing:0.12em;text-transform:uppercase;font-weight:700;margin-bottom:8px';
+          meta.textContent = [it.source, it.date].filter(Boolean).join(' · ');
+          var h = document.createElement('h3');
+          h.style.cssText = 'font-size:17px;font-weight:700;color:#231F20;margin:0 0 8px;line-height:1.3';
+          h.textContent = it.headline;
+          var p = document.createElement('p');
+          p.style.cssText = 'font-size:14px;color:#3D434A;margin:0 0 14px;line-height:1.55;flex:1';
+          p.textContent = it.summary || '';
+          card.appendChild(meta); card.appendChild(h); card.appendChild(p);
+          var href = safeUrl(it.url);
+          if (href) {
+            var a = document.createElement('a');
+            a.href = href; a.target = '_blank'; a.rel = 'noopener';
+            a.style.cssText = 'font-size:14px;font-weight:700;color:#005EB8';
+            a.textContent = 'Read the source \u2197';
+            card.appendChild(a);
+          }
+          list.appendChild(card);
+        });
+        if (!list.children.length) return;
+        if (data.updated) {
+          var u = document.getElementById('live-feed-updated');
+          if (u) u.textContent = 'Last updated ' + data.updated;
+        }
+        document.getElementById('live-feed').style.display = 'block';
+      })
+      .catch(() => {});
   }
 }
 </script>
